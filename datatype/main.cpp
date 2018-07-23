@@ -6,20 +6,20 @@ int main(void)
 {
 	cout << "type\tbyte" << endl;
 
-	//¾ã¼Æ
+	//æ•´æ•¸
 	cout << "short\t" << sizeof(short) << endl; //2
 	cout << "int\t" << sizeof(int) << endl; //4
 	cout << "long\t" << sizeof(long) << "\n" << endl; //4
 
-	//¯BÂI¼Æ
+	//æµ®é»žæ•¸
 	cout << "float\t" << sizeof(float) << endl; //4
 	cout << "double\t" << sizeof(double) << endl; //8
 	cout << "long double\t" << sizeof(long double) << "\n" << endl; //8
 
-	//¦r¤¸
+	//å­—å…ƒ
 	cout << "char\t" << sizeof(char) << "\n" << endl; //1
 
-	//¥¬ªL
+	//å¸ƒæž—
 	cout << "bool\t" << sizeof(bool) << endl; //1
 
 	system("pause");
