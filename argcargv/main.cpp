@@ -15,7 +15,7 @@ int main(const int argc, char *argv[]) //莉眔场把计
 	//场把计ず甧
 	cout << "rgv[0]" << argv[0] << endl;
 
-	//pen apple pineapple
+	//PPAP - pen apple pineapple
 	cout << "I have a " << argv[1] << "," << endl;
 	cout << "I have a " << argv[2] << "." << endl;
 	cout << "Uh! " << argv[2] << "-" << argv[1] << "!\n" << endl;
