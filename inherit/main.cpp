@@ -1,5 +1,5 @@
 #include <iostream>
-#include <math.h>
+#include <math.h> //sqrt
 using namespace std;
 
 class Point2D {
