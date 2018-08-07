@@ -9,18 +9,18 @@ public:
 		this->y = 0;
 	}
 public:
-	int x;
-	int y;
+	float x;
+	float y;
 };
 
-//Ä~©Ó
+//ç¹¼æ‰¿
 class Point3D : public Point2D {
 public:
 	Point3D() {
 		this->z = 0;
 	}
 public:
-	int z;
+	float z;
 };
 
 class TRI {
@@ -43,8 +43,8 @@ float TRI::distance(Point3D A, Point3D B) {
 	return sqrt((B.x - A.x)*(B.x - A.x) + (B.y - A.y)*(B.y - A.y) + (B.z - A.z)*(B.z - A.z));
 }
 
-//¦Û­q¨ç¼Æ
-//¨D¦V¶q
+//è‡ªè¨‚å‡½æ•¸
+//æ±‚å‘é‡
 Point3D subVectors(Point3D a, Point3D b) {
 	Point3D c;
 	c.x = a.x - b.x;
@@ -53,7 +53,7 @@ Point3D subVectors(Point3D a, Point3D b) {
 	return c;
 }
 
-//¨D¥~¿n
+//æ±‚å¤–ç©
 Point3D crossVectors(Point3D a, Point3D b) {
 	Point3D c;
 	c.x = a.y * b.z - a.z * b.y;
@@ -62,11 +62,11 @@ Point3D crossVectors(Point3D a, Point3D b) {
 	return c;
 }
 
-//¥¿³W¤Æ
+//æ­£è¦åŒ–
 Point3D normalize(Point3D a) {
 	Point3D c;
 	float len = sqrt(a.x * a.x + a.y * a.y + a.z * a.z);
-	len = len != 0 ? len : 1; //«OÅ@
+	len = len != 0 ? len : 1; //ä¿è­·
 	c.x = a.x / len;
 	c.y = a.y / len;
 	c.z = a.z / len;
@@ -75,28 +75,28 @@ Point3D normalize(Point3D a) {
 
 int main(void) {
 
-	Point3D A; //ÂIA
+	Point3D A; //é»A
 	A.x = 1.0; A.y = 0.0; A.z = 0.0;
 
-	Point3D B; //ÂIB
+	Point3D B; //é»B
 	B.x = -1.0; B.y = 0.0; B.z = 0.0;
 
-	Point3D C; //ÂIC
+	Point3D C; //é»C
 	C.x = 0.0; C.y = 1.0; C.z = 0.0;
 
-	//Point3D N; //ªk¦V¶qN
+	//Point3D N; //æ³•å‘é‡N
 	//N.x = 0.0; N.y = 0.0; N.z = 1.0;
 
-	Point3D ab = subVectors(A, B); //ab¦V¶q
-	Point3D cb = subVectors(C, B); //cb¦V¶q
-	Point3D N = crossVectors(ab, cb); //ªk¦V¶qN
-	N = normalize(N); //¥¿³W¤Æ
+	Point3D ab = subVectors(A, B); //abå‘é‡
+	Point3D cb = subVectors(C, B); //cbå‘é‡
+	Point3D N = crossVectors(ab, cb); //æ³•å‘é‡N
+	N = normalize(N); //æ­£è¦åŒ–
 
 	TRI ABC;
-	ABC.A = A; //AÂI®y¼Ğ
-	ABC.B = B; //BÂI®y¼Ğ
-	ABC.C = C; //CÂI®y¼Ğ
-	ABC.N = N; //ªk¦V¶q
+	ABC.A = A; //Aé»åº§æ¨™
+	ABC.B = B; //Bé»åº§æ¨™
+	ABC.C = C; //Cé»åº§æ¨™
+	ABC.N = N; //æ³•å‘é‡
 
 	cout << "AB:" << ABC.AB() << endl;
 	cout << "BC:" << ABC.BC() << endl;
