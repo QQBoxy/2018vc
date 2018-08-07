@@ -66,7 +66,7 @@ Point3D crossVectors(Point3D a, Point3D b) {
 Point3D normalize(Point3D a) {
 	Point3D c;
 	float len = sqrt(a.x * a.x + a.y * a.y + a.z * a.z);
-	len = len != 0 ? len : 1; //保護
+	len = (len != 0) ? len : 1; //保護
 	c.x = a.x / len;
 	c.y = a.y / len;
 	c.z = a.z / len;
