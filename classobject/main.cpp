@@ -8,8 +8,8 @@ public:
 		this->y = 0;
 	}
 public:
-	int x;
-	int y;
+	float x;
+	float y;
 };
 
 class TRI {
@@ -44,9 +44,9 @@ int main(void) {
 	C.x = 0.0; C.y = 1.0;
 
 	TRI ABC;
-	ABC.A = A; //AÂI®y¼Ð
-	ABC.B = B; //BÂI®y¼Ð
-	ABC.C = C; //CÂI®y¼Ð
+	ABC.A = A; //Aé»žåº§æ¨™
+	ABC.B = B; //Bé»žåº§æ¨™
+	ABC.C = C; //Cé»žåº§æ¨™
 
 	cout << "AB:" << ABC.AB() << endl;
 	cout << "BC:" << ABC.BC() << endl;
